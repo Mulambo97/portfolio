@@ -1,75 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "shared/layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/header.css">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/piano/css/piano.css">
-</head>
-<body>
-<header>
-</header>
-<nav>
-    <div class="left-side">
-    </div>
-    <div class="right-side">
-        <a href="/home"
-           title="to home">Home</a>
-        <a href="/project"
-           title="to projects">Projects
-        </a>
-        <a href="../static/main/documents/Resume.pdf"
-           title="to resume">Resume
-        </a>
-        <a href="https://www.linkedin.com/in/odon-mulambo-8764081a9?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B59nAl829RI6gSPrVglX3mg%3D%3D"
-           title="to my linkedin">
-            <span class="linkedin-icon">
-                <img src="../static/main/images/social-linkedin.png ">
-            </span>
-            <span class="linkedin-text">LinkedIn</span>
-        </a>
-    </div>
-    <div class="menu-bar">
-        <img src="../static/main/images/menu-bar.png" alt="Menu bar icon" onclick="document.querySelector('.right-side').classList.toggle('show-links')">
+{% block title %}Projects - Odon Mulambo{% endblock %}
 
-    </div>
-</nav>
-<main>
-    <h3 class="description italic">Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, call out to it - we see you</h3>
-    <div class="divider"></div>
-    <div class="piano-container">
-        <h1 class="piano-title">The Great Old One</h1>
-        <div class="piano-keyboard">
-            <!-- White Keys -->
-            <div class="white-key" id="key-a"><span class="key-label">A</span></div>
-            <div class="white-key" id="key-s"><span class="key-label">S</span></div>
-            <div class="white-key" id="key-d"><span class="key-label">D</span></div>
-            <div class="white-key" id="key-f"><span class="key-label">F</span></div>
-            <div class="white-key" id="key-g"><span class="key-label">G</span></div>
-            <div class="white-key" id="key-h"><span class="key-label">H</span></div>
-            <div class="white-key" id="key-j"><span class="key-label">J</span></div>
-            <div class="white-key" id="key-k"><span class="key-label">K</span></div>
-            <div class="white-key" id="key-l"><span class="key-label">L</span></div>
-            <div class="white-key" id="key-semicolon"><span class="key-label">;</span></div>
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='piano/css/piano.css') }}">
+{% endblock %}
 
-            <!-- Black Keys -->
-            <div class="black-key" id="key-w"><span class="key-label">W</span></div>
-            <div class="black-key" id="key-e"><span class="key-label">E</span></div>
-            <div class="black-key" id="key-t"><span class="key-label">T</span></div>
-            <div class="black-key" id="key-y"><span class="key-label">Y</span></div>
-            <div class="black-key" id="key-u"><span class="key-label">U</span></div>
-            <div class="black-key" id="key-o"><span class="key-label">O</span></div>
-            <div class="black-key" id="key-p"><span class="key-label">P</span></div>
-        </div>
+{% block content %}
+<h3 class="description italic">Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, call out to it - we see you</h3>
+<div class="divider"></div>
+<div class="piano-container">
+    <h1 class="piano-title">The Great Old One</h1>
+    <div class="piano-keyboard">
+        <!-- White Keys -->
+        <div class="white-key" id="key-a"><span class="key-label">A</span></div>
+        <div class="white-key" id="key-s"><span class="key-label">S</span></div>
+        <div class="white-key" id="key-d"><span class="key-label">D</span></div>
+        <div class="white-key" id="key-f"><span class="key-label">F</span></div>
+        <div class="white-key" id="key-g"><span class="key-label">G</span></div>
+        <div class="white-key" id="key-h"><span class="key-label">H</span></div>
+        <div class="white-key" id="key-j"><span class="key-label">J</span></div>
+        <div class="white-key" id="key-k"><span class="key-label">K</span></div>
+        <div class="white-key" id="key-l"><span class="key-label">L</span></div>
+        <div class="white-key" id="key-semicolon"><span class="key-label">;</span></div>
+
+        <!-- Black Keys -->
+        <div class="black-key" id="key-w"><span class="key-label">W</span></div>
+        <div class="black-key" id="key-e"><span class="key-label">E</span></div>
+        <div class="black-key" id="key-t"><span class="key-label">T</span></div>
+        <div class="black-key" id="key-y"><span class="key-label">Y</span></div>
+        <div class="black-key" id="key-u"><span class="key-label">U</span></div>
+        <div class="black-key" id="key-o"><span class="key-label">O</span></div>
+        <div class="black-key" id="key-p"><span class="key-label">P</span></div>
     </div>
-</main>
-<div > </div>
-<footer>
-    <p>&copy; 2023 Odon Mulambo</p>
-</footer>
-<script src="../static/piano/js/piano.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='piano/js/piano.js') }}"></script>
+{% endblock %}
