@@ -1,0 +1,6 @@
+experience_id,position_id,name,description,hyperlink,start_date,end_date
+1,1,Software Developer - ITOT,"Designed and deployed a job posting platform using React, Node.js, and MongoDB, increasing user engagement by 30% in 3 months.",,2024-01-01,PRESENT
+2,2,Software Developer - Ally Financial,"Led a team of five in developing a financial literacy web app for Ally, improving financial education for thousands of users.",,2023-09-01,2023-12-31
+3,3,Project Developer - Michigan State University,"Engineered a high-accuracy pedestrian detection system integrated with Brake-by-Wire, reducing collision risk by 95% in simulations.",,2023-09-01,2023-12-31
+4,4,Project Developer - Michigan State University,"Developed an Android-based Chess and Simon Says game with online multiplayer, along with a GPS tracking app that increased user activity by 15%.",,2023-01-01,2023-05-31
+5,5,Resident Assistant - Michigan State University,"Organized study groups leading to an average GPA increase of 0.5 among participants and provided mediation support to enhance the living experience.",,2021-08-01,2023-12-31

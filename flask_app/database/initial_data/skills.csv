@@ -1,0 +1,20 @@
+"skill_id","position_id","name","skill_level"
+"1","1","React",8
+"2","1","Node.js",8
+"3","1","MongoDB",8
+"4","1","Data Pipeline Design",7
+"5","2","Agile Methodology",8
+"6","2","React.js",8
+"7","2","Node.js",8
+"8","2","ETL Workflow Management",7
+"9","3","Python",8
+"10","3","Algorithm Design",8
+"11","3","Real-time Processing",8
+"12","4","Android Development",8
+"13","4","Java",7
+"14","4","MySQL",7
+"15","4","GPS Integration",7
+"16","5","Leadership",9
+"17","5","Conflict Resolution",9
+"18","5","Communication",9
+
