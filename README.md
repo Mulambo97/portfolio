@@ -1,0 +1,75 @@
+# Personal Portfolio Website 🌐
+
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Deployment](https://img.shields.io/badge/deployed_on-Google_Cloud-4285F4?logo=google-cloud)](https://your-website-url.com)
+[![Responsive Design](https://img.shields.io/badge/mobile-responsive-success)]()
+
+Live Demo: [yourwebsite.com](https://your-website-url.com)
+
+![Website Preview](static/images/website-preview.png)
+
+## Purpose 🚀
+A modern portfolio website to:
+- Showcase professional experience and technical skills
+- Display portfolio projects with interactive demos
+- Provide professional contact information
+- Demonstrate full-stack development capabilities
+
+## Features ✨
+
+### **Home Page** (`home.html`)
+- Professional banner with responsive scaling
+- Bio section with profile image and personal statement
+- Skills showcase with technology icons
+- Mobile-first responsive layout
+
+### **Projects Page** (`projects.html`)
+- Project cards with detailed descriptions
+- Interactive elements with hover effects
+- Direct links to live demos and GitHub repositories
+- Responsive grid layout
+
+### **Contact Page** (`contact.html`)
+- Social media links with custom icons
+- Professional contact form with email integration
+- Interactive map integration
+- Resume download button
+
+## Technologies Used 💻
+
+**Frontend**
+- HTML5 Semantic Markup
+- CSS3 (Flexbox, Grid, Animations)
+- JavaScript (ES6+)
+- Responsive Design (Media Queries)
+
+**DevOps**
+- Docker Containerization
+- Google Cloud Platform (Deployment)
+- Git Version Control
+
+## Local Development 🛠️
+
+### Prerequisites
+- Docker Desktop
+- Modern web browser
+
+### Setup Instructions
+1. Clone repository:
+```bash
+git clone https://github.com/your-username/personal-website.git
+cd personal-website
+```
+
+2. Start development server:
+```bash
+docker-compose -f docker-compose.yml -p personal-website up
+```
+
+3. Access website at:
+http://localhost:8080/home.html
+
+4. Build and deploy to Google Cloud:
+```gcloud builds submit --tag gcr.io/your-project-id/personal-website
+gcloud run deploy --image gcr.io/your-project-id/personal-website --platform managed```
+

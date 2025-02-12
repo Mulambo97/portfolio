@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <!-- Head -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/main/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/main/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../static/main/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/main/css/navbar.css">
+</head>
+<!-- Head End -->
+<body>
+    <!-- Header -->
+    <header>
+    </header>
+    <!-- Header End -->
+    <!-- navigation bar begins -->
+    <nav>
+        <div class="left-side">
+        </div>
+        <div class="right-side">
+            <a href="home.html"
+               title="to home">Home</a>
+            <a href="projects.html"
+               title="to projects">Projects</a>
+            <a href="../static/main/documents/Resume.pdf"
+               title="to resume">Resume</a>
+            <a href="https://www.linkedin.com/in/odon-mulambo-8764081a9?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B59nAl829RI6gSPrVglX3mg%3D%3D"
+               title="to my linkedin">
+                <img src="../static/main/images/social-linkedin.png ">
+            </a>
+        </div>
+        <div class="menu-bar">
+            <img src="{{ url_for('static', filename='main/images/menu-bar.png') }}" alt="Menu bar icon" onclick="document.querySelector('.right-side').classList.toggle('show-links')">
+        </div>
+        </div>
+    </nav>
+    <!-- navigation End -->
+
+    <!-- Main -->
+    <main>
+        <div class="right-top">
+            <h2 style="text-align: center;">Below is a list of projects I worked on in CSE 477:</h2>
+            <p style="text-align: center;">Click an image, or hyperlink in the description to learn more</p>
+        </div>
+        <div class="divider"></div>
+        <div class="row-1">
+            <div class="left-column">
+                <a href="piano.html">
+                    <img src="../static/main/images/piano.jpeg" alt="piano">
+                </a>
+            </div>
+            <div class="right-column">
+                <h4 style="text-align: center;">Javascript Piano</h4>
+                <p style="text-align: center;">This project displays piano created using CSS,HTML, and javascript. When the words
+                    "We see you" are typed one after another it will display an image of "The Great One"</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row-2">
+            <h3 style="text-align: center;">
+                More Coming Soon
+            </h3>
+        </div>
+    </main>
+    <!-- Main End -->
+    <div>
+
+    </div>
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2023 Odon Mulambo</p>
+    </footer>
+    <!-- footer end -->
+</body>
+</html>

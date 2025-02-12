@@ -1,0 +1,14 @@
+/*
+Author: Odon Mulambo
+*/
+
+/* Defines the layout and styling of a web page */
+
+header {
+    background-image: url(https://gitlab.msu.edu/cse477-spring-2023/course-materials/-/raw/main/homework/Homework-1/flask_app/static/main/images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 10vh;
+}

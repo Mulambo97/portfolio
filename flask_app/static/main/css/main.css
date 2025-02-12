@@ -1,0 +1,102 @@
+/*
+Author: Odon Mulambo
+*/
+
+/* Main container with constrained width */
+main {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+/* Center headings */
+h2, h3 {
+    text-align: center;
+}
+
+/* Equal columns layout */
+.row-1 {
+    display: flex;
+    width: 80vw;
+    height: 50vh;
+    max-height: 50vh;
+}
+
+/* Image column */
+.left-column {
+    flex: 1;
+    overflow: hidden;
+}
+
+.left-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+
+/* Text column with scroll */
+.right-column {
+    flex: 1;
+    padding: 0 20px;
+    overflow-y: auto;
+    min-height: 100px;
+}
+
+
+/* Center column headings */
+.right-column h2,
+.right-column h3 {
+    text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    .row-1 {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+    }
+
+    .left-column {
+        height: auto;
+        width: 100%;
+    }
+
+    .left-column img {
+        height: auto;
+        max-height: 50vh;
+    }
+
+    .right-column {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        padding: 20px 0;
+    }
+}
+
+/* Divider styling */
+.divider {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width: 80vw;
+    margin: 20px auto;
+}
+
+/* Content rows */
+.row-2 {
+    width: 80vw;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.row-3 {
+    width: 80vw;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
