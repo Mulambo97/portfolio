@@ -1,4 +1,4 @@
-"skill_id","position_id","name","skill_level"
+"skill_id","experience_id","name","skill_level"
 "1","1","React",8
 "2","1","Node.js",8
 "3","1","MongoDB",8
@@ -17,4 +17,3 @@
 "16","5","Leadership",9
 "17","5","Conflict Resolution",9
 "18","5","Communication",9
-

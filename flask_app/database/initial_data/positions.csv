@@ -1,5 +1,6 @@
 position_id,inst_id,title,responsibilities,start_date,end_date
 1,1,Software Developer,"Developed financial literacy web apps, managed ETL workflows, and implemented scalable web solutions.",2023-09-01,2023-12-31
 2,1,Project Developer,"Designed and implemented pedestrian collision avoidance and mobile applications.",2023-01-01,2023-12-31
-3,2,Software Developer,"Built a job posting platform, improved user engagement by 30%, and optimized data pipelines.",2024-01-01,PRESENT
-4,3,Resident Assistant,"Organized study groups, mediated conflicts, and enhanced student living experiences.",2021-08-01,2023-12-31
+3,2,Software Developer,"Built a job posting platform, improved user engagement by 30%, and optimized data pipelines.",2024-01-01,2027-01-01
+4,1,Software Developer,"Developed an Android-based Simon Says game and a Chess game using Java and MySQL",2024-01-01,2027-01-01
+5,3,Resident Assistant,"Organized study groups, mediated conflicts, and enhanced student living experiences.",2021-08-01,2023-12-31

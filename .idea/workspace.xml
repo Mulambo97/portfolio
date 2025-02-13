@@ -7,8 +7,11 @@
     <list default="true" id="62474be3-4ef7-4180-84ce-8179f1e8ca5e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/database/create_tables/experiences.sql" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/create_tables/experiences.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/experiences.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/experiences.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/positions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/positions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/skills.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/skills.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/static/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/main/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/templates/shared/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/shared/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739082055818</updated>
       <workItem from="1739082056887" duration="47159000" />
-      <workItem from="1739389444877" duration="3207000" />
+      <workItem from="1739389444877" duration="5545000" />
     </task>
     <servers />
   </component>
