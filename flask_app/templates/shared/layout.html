@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/footer.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/navbar.css') }}">
+    {% block extracss %}{% endblock %}
+    <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+    {% block extrajs %}{% endblock %}
+
     {% block extra_styles %}{% endblock %}
 </head>
 <body>
@@ -32,9 +36,25 @@
     </nav>
 
     <main>
-        <div class = "feedback"><strong> Feedback</strong></div>
         {% block content %}{% endblock %}
     </main>
+
+     <!-- the feedback button -->
+     <button id="feedback-button" class="feedback-button"></button>
+     <!-- The feedback modal -->
+     <div id="feedback-form-container" class="modal" style="display: none;">
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <h2 style="color: #ffffff;">Feedback</h2>
+             <form action="/processfeedback" method="post">
+                 <input class="feedback-input" type="text" id="name" name="name" placeholder="Name" required><br>
+                 <input class="feedback-input" type="email" id="email" name="email" placeholder="Email" required><br>
+                 <textarea class="feedback-input" id="comments" name="comment" rows="4" cols="50" placeholder="Comments" required></textarea>
+                 <input class="submit" id="send-button" type="submit" value="Send">
+             </form>
+         </div>
+     </div>
+ 
 
     <footer>
         <p>&copy; {{ current_year }} Odon Mulambo</p>

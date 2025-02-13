@@ -98,23 +98,86 @@ h2, h3 {
     text-align: center;
 }
 
-/* feedback button */
-
-.feedback{
+/* Feedback Button */
+.feedback-button {
     position: fixed;
-    right: 0;
     top: 50%;
-    transform: translateY(-50%) rotate(180deg);
+    right: 0;
     background-color: #333;
-    color: white;
-    padding: 8px 8px;
-    font-size: 16px;
-    font-weight: bold;
-    writing-mode: vertical-rl;
+    color: #ffffff;
+    padding: 40px 0.05vh;
     cursor: pointer;
+    border-radius: 5px 0 0 5px;
+    z-index: 10;
+    font-size: 10px;
+    transform: translateY(-50%);
+}
+.feedback-button::before {
+    content: "Feedback";
+    display: inline-block;
+    transform: rotate(-90deg);
 }
 
+/* Feedback Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+.modal-content {
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
 
-
-
+/* Feedback Input */
+.feedback-input {
+    background-color: white;
+    color: #333;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.feedback-input::placeholder {
+    color: #333;
+    opacity: 1;
+}
+.submit {
+    width: 100%;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.submit:hover {
+    background-color: skyblue;
+}
 
