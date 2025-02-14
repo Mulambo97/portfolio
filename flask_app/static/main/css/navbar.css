@@ -2,90 +2,107 @@
 Author: Odon Mulambo
 */
 
-/* Defines the nav with height, a background color, and text */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
-    background-color: #333;
+    height: 80px; 
+    background-color: #2c3e50;
     color: #fff;
     padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Defines the left side of the nav*/
-.left-side p {
-    margin: 0;
+/* Left Side of Navbar */
+.left-side {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-/* Defines the right side of the nav container with space */
+/* Right Side of Navbar */
+.right-side {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
 .right-side a {
     color: #fff;
     text-decoration: none;
-    margin-right: 20px;
-    opacity: 0.7;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
 }
 
 .right-side a:hover {
+    color: #1abc9c; /* Teal hover effect */
     opacity: 1;
 }
 
-/* Defines the LinkedIn icon, text, and image on the right side */
-.right-side .linkedin-icon {
+/* LinkedIn Icon and Text */
+.linkedin-icon img {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.linkedin-text {
+    display: none; /* Hide text by default */
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.right-side a:hover .linkedin-text {
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin-right: 5px;
-
 }
 
-.right-side .linkedin-text {
-    display: inline-block;
-    width: 0;
-    opacity: 0;
-    transition: width 0.2s, opacity 0.2s;
-}
-
-.right-side img {
-    height: 30px;
-    width: 30px;
-}
-
-/* Hides the menu bar icon */
+/* Menu Bar (Hidden by Default) */
 .menu-bar {
     display: none;
+    cursor: pointer;
 }
+
 .menu-bar img {
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
 }
 
-/* Defines a media query to hide elements based on screen size */
-@media (max-width: 650px) {
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
     .right-side {
-        display: none;
-    }
-
-    /* Changes the layout of the links */
-    .right-side.show-links {
-        display: flex;
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 100px;
+        top: 80px;
         right: 0;
-        background-color: #333;
+        background-color: #2c3e50;
         width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .right-side.show-links {
+        display: flex;
     }
 
     .right-side.show-links a {
         padding: 10px 20px;
-        margin: 0;
+        text-align: center;
+        width: 100%;
     }
 
-    /* Shows the menu bar icon */
     .menu-bar {
-        display: block;
-        cursor: pointer;
+        display: block; 
     }
 }
 

@@ -1,0 +1,23 @@
+{% extends 'shared/layout.html' %}
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/feedback.css') }}">
+{% endblock %}
+{% block content %}
+<div class="feedback-container">
+  <h1>Feedback Entries</h1>
+  {% if feedback_data %}
+  <ul class="feedback-list">
+    {% for feedback in feedback_data %}
+    <li>
+      <strong>{{ feedback.name }}</strong> said: "{{ feedback.comment }}"
+      {% if feedback.submission_date %}
+        <span class="submission-date">({{ feedback.submission_date.strftime('%b %d, %Y') }})</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="no-feedback">No feedback submissions yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
