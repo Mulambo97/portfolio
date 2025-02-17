@@ -4,10 +4,6 @@
 [![Deployment](https://img.shields.io/badge/deployed_on-Google_Cloud-4285F4?logo=google-cloud)](https://your-website-url.com)
 [![Responsive Design](https://img.shields.io/badge/mobile-responsive-success)]()
 
-Live Demo: [yourwebsite.com](https://your-website-url.com)
-
-![Website Preview](static/images/website-preview.png)
-
 ## Purpose 🚀
 A modern portfolio website to:
 - Showcase professional experience and technical skills
