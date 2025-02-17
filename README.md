@@ -29,11 +29,9 @@ A modern portfolio website to:
 - Direct links to live demos and GitHub repositories
 - Responsive grid layout
 
-### **Contact Page** (`contact.html`)
-- Social media links with custom icons
+### **Contact Page** (`resume.html`)
 - Professional contact form with email integration
-- Interactive map integration
-- Resume download button
+- Skills and project worked on
 
 ## Technologies Used 💻
 
@@ -57,13 +55,13 @@ A modern portfolio website to:
 ### Setup Instructions
 1. Clone repository:
 ```bash
-git clone https://github.com/your-username/personal-website.git
-cd personal-website
+git clone https://github.com/Mulambo97/portfolio.git
+cd portfolio
 ```
 
 2. Start development server:
 ```bash
-docker-compose -f docker-compose.yml -p personal-website up
+docker-compose -f docker-compose.yml -p portfolio up
 ```
 
 3. Access website at:
