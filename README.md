@@ -64,6 +64,7 @@ docker-compose -f docker-compose.yml -p portfolio up
 http://localhost:8080/home.html
 
 4. Build and deploy to Google Cloud:
-```gcloud builds submit --tag gcr.io/your-project-id/personal-website
-gcloud run deploy --image gcr.io/your-project-id/personal-website --platform managed```
+```bash 
+gcloud builds submit --tag gcr.io/portfolio-1/portfolio
+gcloud run deploy --image gcr.io/portfolio-1/portfolio--platform managed```
 
