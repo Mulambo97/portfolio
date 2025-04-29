@@ -1,4 +1,2 @@
-flask
-gunicorn
-Flask-Failsafe
-mysql-connector-python
+gunicorn==23.0.0
+packaging==25.0
