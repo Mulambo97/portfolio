@@ -2,5 +2,3 @@ inst_id,type,name,department,address,city,state,zip
 1,Academia,Michigan State University,Computer Science,NULL,East Lansing,Michigan,NULL
 2,Industry,ITOT USA,Software Development,NULL,Minneapolis,Minnesota,NULL
 3,Industry,Ally Financial,Technology,NULL,Detroit,Michigan,NULL
-4,Academia,National Institutes of Health,NULL,NULL,Bethesda,Maryland,NULL
-5,Industry,Standard and Poor's Financial Services,Ratings,NULL,New York City,New York,NULL

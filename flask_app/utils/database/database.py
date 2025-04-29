@@ -126,22 +126,27 @@ class database:
         colSize = len(columns)
         colStr = ','.join(columns)
         paramStr = ','.join(['%s']*colSize)
+        sql = f'INSERT INTO {table} ({colStr}) VALUES ({paramStr})'
+        print(f"Generated SQL: {sql}")  # Debugging output
+
         cur = cnx.cursor()
-        sql = 'INSERT INTO ' + table + '(' + colStr + ')' + ' VALUES (' + paramStr + ')'
-
-        # Replace 'NULL' values in date columns with the appropriate NULL value for your database
-        for row in parameters:
-            for i, value in enumerate(row):
-                if value == 'NULL':
-                    row[i] = None
-
-        for row in parameters:
-            cur.execute(sql, tuple(row))
-        cnx.commit()
-
-        cur.close()
-        cnx.close()
-
+        try:
+            for row in parameters:
+                if not row:  # Skip empty rows
+                    print("Skipping empty row")
+                    continue
+                print(f"Inserting row: {row}")  # Debugging output
+                if len(row) != colSize:
+                    raise ValueError(f"Row length mismatch: Expected {colSize} values, got {len(row)}")
+                cur.execute(sql, tuple(row))
+            cnx.commit()
+        except mysql.connector.Error as e:
+            print(f"Error executing query: {sql}\nParameters: {parameters}\nError: {e}")
+            cnx.rollback()
+            raise
+        finally:
+            cur.close()
+            cnx.close()
 
 
     def getResumeData(self):

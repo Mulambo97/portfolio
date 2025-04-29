@@ -33,22 +33,20 @@ def piano():
 
 @app.route('/processfeedback', methods=['POST'])
 def processfeedback():
-    feedback = request.form.to_dict()  # Convert ImmutableMultiDict to a dictionary
+    feedback = request.form.to_dict()
 
     name = feedback.get('name')
     email = feedback.get('email')
     comment = feedback.get('comment')
 
-    # Check if any of the variables are None and handle the case
-    if name is None or email is None or comment is None:
-        # Set default values or return an error message
-        return "Error: One or more fields are empty."
+    if not all([name, email, comment]):
+        return "Error: All fields are required.", 400
 
-    # Insert the form data into the feedback table within the database
-    db.query("INSERT INTO feedback (name, email, comment) VALUES (%s, %s, %s)", (name, email, comment))
-
-    # Extract all feedback from the feedback table
-    feedback_data = db.query("SELECT * FROM feedback")
-
-    # Render a template processfeedback.html that transforms the feedback data
+    # Insert feedback into database
+    db.insert_feedback(name, email, comment)  # Using proper method
+    
+    # Retrieve updated feedback list
+    feedback_data = db.get_all_feedback()
+    
+    # Render template correctly
     return render_template('processfeedback.html', feedback_data=feedback_data)

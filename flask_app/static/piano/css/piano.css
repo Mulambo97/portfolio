@@ -70,19 +70,19 @@ Author: Odon Mulambo
     padding-bottom: 5px;
 
     /* Adjust positioning */
-    top: 1px; /* Move them to the top */
+    top: -4px; /* Move them to the top */
     left: 0; /* Keep their alignment correct */
 }
 
 
 /* Positioning Black Keys */
-#key-w { left: 58px; }
-#key-e { left: 125px; }
-#key-t { left: 262px; }
-#key-y { left: 329px; }
-#key-u { left: 398px; }
-#key-o { left: 534px; }
-#key-p { left: 604px; }
+#key-w { left: 54px; }
+#key-e { left: 120px; }
+#key-t { left: 245px; }
+#key-y { left: 310px; }
+#key-u { left: 375px; }
+#key-o { left: 500px; }
+#key-p { left: 568px; }
 
 /* Key Press Effect */
 .white-key:active, .black-key:active {

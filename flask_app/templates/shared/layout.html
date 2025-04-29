@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/navbar.css') }}">
+    {% block extracss %}{% endblock %}
+    <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+    {% block extrajs %}{% endblock %}
+
+    {% block extra_styles %}{% endblock %}
+</head>
+<body>
+    <header></header>
+    
+    <nav>
+        <div class="left-side"></div>
+        <div class="right-side">
+            <a href="/home" title="to home">Home</a>
+            <a href="/project" title="to projects">Projects</a>
+            <a href="/resume" title="to resume">Resume</a>
+            <a href="https://www.linkedin.com/in/odon-mulambo" title="LinkedIn">
+                <span class="linkedin-icon">
+                    <img src="{{ url_for('static', filename='main/images/social-linkedin.png') }}" alt="linkedin">
+                </span>
+                <span class="linkedin-text">LinkedIn</span>
+            </a>
+        </div>
+        <div class="menu-bar">
+            <img src="{{ url_for('static', filename='main/images/menu-bar.png') }}" alt="Menu" 
+                 onclick="document.querySelector('.right-side').classList.toggle('show-links')">
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+     <!-- the feedback button -->
+     <button id="feedback-button" class="feedback-button"></button>
+     <!-- The feedback modal -->
+     <div id="feedback-form-container" class="modal" style="display: none;">
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <h2 style="color: #ffffff;">Feedback</h2>
+             <form action="/processfeedback" method="post">
+                 <input class="feedback-input" type="text" id="name" name="name" placeholder="Name" required><br>
+                 <input class="feedback-input" type="email" id="email" name="email" placeholder="Email" required><br>
+                 <textarea class="feedback-input" id="comments" name="comment" rows="4" cols="50" placeholder="Comments" required></textarea>
+                 <input class="submit" id="send-button" type="submit" value="Send">
+             </form>
+         </div>
+     </div>
+ 
+
+    <footer>
+        <p>&copy; {{ current_year }} Odon Mulambo</p>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

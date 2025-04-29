@@ -1,0 +1,90 @@
+{% extends 'shared/layout.html' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/resume.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="resume-header">
+    <div class="resume-name">Odon Mulambo</div>
+    <div class="resume-contact">
+        Email: mulambom15@gmail.com | Phone: (26927626812) | Github: <a href="https://github.com/Mulambo97">Profile</a>
+    </div>
+    <div class="resume-summary">
+        Passionate software engineer with 5+ years of experience in full-stack development. Skilled in Python, JavaScript, and database management.
+    </div>
+</div>
+<hr>
+
+<div class="container">
+
+    <!-- For each institution - generate a row -->
+    {% for inst_id, inst in resume_data.items() %}
+    <div class="institution">
+        <div class="institution-header">
+            <div class="institution-name">{{ inst['name'] }}</div>
+            {% if inst['location'] is not none %}
+            <div class="institution-location">{{ inst['location'] }}</div>
+            {% endif %}
+        </div>
+        {% if inst['positions'] != {} %}
+        {% for pos_id, pos in inst['positions'].items() %}
+        <div class="position">
+            <div class="position-header">
+                <div class="position-title">{{ pos['title'] }}</div>
+                <div class="position-dates">
+                    {% if pos['start_date'] is not none %}
+                    {{ pos['start_date'] }}
+                    {% endif %}
+                    {% if pos['end_date'] is not none %}
+                    - {{ pos['end_date'] }}
+                    {% else %}
+                    - Present
+                    {% endif %}
+                </div>
+            </div>
+            {% if pos['responsibilities'] is not none %}
+            <div class="position-responsibilities">
+                {{ pos['responsibilities'] }}
+            </div>
+            {% endif %}
+
+            {% if pos['experiences'] != {} %}
+            {% for exp_id, exp in pos['experiences'].items() %}
+            <div class="experience">
+                {% if exp['hyperlink'] is not none %}
+                <a href="{{ exp['hyperlink'] }}" class="experience-name">{{ exp['name'] }}</a>
+                {% else %}
+                <div class="experience-name">{{ exp['name'] }}</div>
+                {% endif %}
+                {% if exp['description'] is not none %}
+                <div class="experience-description">{{ exp['description'] }}</div>
+                {% endif %}
+
+                {% if exp['skills'] != {} %}
+                <div class="skills">
+                    {% for skill_id, skill in exp['skills'].items() %}
+                    <div class="skill">
+                        <div class="skill-name">{{ skill['name'] }}</div>
+                        {% if skill['skill_level'] is not none %}
+                        <div class="skill-level">{{ skill['skill_level'] }}</div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <hr>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

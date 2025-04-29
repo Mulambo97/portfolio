@@ -1,82 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/header.css">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../static/main/css/navbar.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-    </header>
-    <!-- Header -->
+{% extends "shared/layout.html" %}
 
-    <!-- nav bar -->
-    <nav>
-        <div class="left-side">
-        </div>
-        <div class="right-side">
-            <a href="/home"
-               title="to home">Home</a>
-            <a href="/project"
-               title="to projects">Projects
-            </a>
-            <a href="../static/main/documents/Resume.pdf "
-               title="to resume">Resume
-            </a>
-            <a href="https://www.linkedin.com/in/odon-mulambo-8764081a9?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B59nAl829RI6gSPrVglX3mg%3D%3D"
-               title="to my linkedin">
-                <span class="linkedin-icon">
-                    <img src="../static/main/images/social-linkedin.png " alt="linkedin" loading="lazy">
-                </span>
-                <span class="linkedin-text">LinkedIn</span>
-            </a>
-        </div>
-        <div class="menu-bar">
-            <img src="../static/main/images/menu-bar.png" alt="Menu bar icon" onclick="document.querySelector('.right-side').classList.toggle('show-links')" loading="lazy">
+{% block title %}Home - Odon Mulambo{% endblock %}
 
-        </div>
-    </nav>
-    <!-- nav bag end -->
+{% block content %}
+<div class="row-1">
+    <div class="left-column">
+        <img src="../static/main/images/odon.jpeg" alt="self photo" loading="lazy">
+    </div>
+    <div class="right-column">
+        <h1 style="font-size: 3rem; font-weight: bold;">Odon Mulambo</h1>
+    <p>
+        I am a passionate <strong>Software Engineer</strong> with a strong foundation in 
+        <strong>full-stack development, scalable systems, and cloud technologies</strong>. 
+        With a <em>Bachelor’s degree in Computer Science Engineering from Michigan State University</em>, 
+        I have gained hands-on experience in <strong>Python, C++, Java, JavaScript, React, Node.js, Flask, and AWS</strong>.
+    </p>
 
-    <!-- main -->
-    <main>
-        <div class="row-1">
-            <div class="left-column">
-                <img src="../static/main/images/odon.jpeg" alt="self photo" loading="lazy">
-            </div>
-            <div class="right-column">
-                <p>
-                    <span style="font-size: 3rem;">Odon M. Mulambo</span>, a passionate Software Engineer
-                    with a background in Computer Science Engineering from Michigan State University. I specialize in
-                    full-stack development, scalable systems, and cloud computing. With experience in React, Node.js,
-                    AWS, and databases like MongoDB and PostgreSQL, I build efficient, impactful solutions for global
-                    users. From web applications to AI-driven projects, I thrive on tackling complex challenges and
-                    optimizing performance.
-                </p>
+    <p>
+        I have successfully designed and deployed <strong>dynamic web applications</strong>, 
+        built <strong>scalable data pipelines</strong>, and developed <strong>real-time processing systems</strong>. 
+        Notably, I contributed to a <strong>job posting platform that increased user engagement by 30%</strong>, 
+        led a <strong>financial literacy app project for Ally</strong>, and engineered a 
+        <strong>Pedestrian Collision Avoidance System</strong> that reduced accident risks by 95% in simulations.
+    </p>
 
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="row-2">
-            <h2 style="text-align: center;">Fun fact about you:</h2>
-            <p style="text-align: center;">I once built a pedestrian collision avoidance system that
-                reduced collision risks by 95% in simulations—because saving virtual lives is a good
-                start! 🚀
-            </p>
-        </div>
-    </main>
+    <p>
+        Beyond technical expertise, I thrive in <strong>collaborative and agile environments</strong>, 
+        applying <strong>leadership and problem-solving skills</strong> as a <strong>Resident Assistant.</strong> 
+    </p>
 
-    <!-- main end -->
-    <div > </div>
-
-    <!-- footer -->
-    <footer>
-        <p>&copy; 2023 Odon Mulambo</p>
-    </footer>
-    <!-- footer end -->
-</body>
-</html>
+    <p>
+        Driven by the challenge of solving <strong>real-world problems through innovative technology</strong>, 
+        I continuously seek opportunities to expand my skill set while making a meaningful impact.
+    </p>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row-2">
+    <h2 style="text-align: center;">Fun fact about Me:</h2>
+    <p style="text-align: center;">I once built a pedestrian collision avoidance system that
+        reduced collision risks by 95% in simulations—because saving virtual lives is a good
+        start! 🚀
+    </p>
+</div>
+{% endblock %}
