@@ -1,7 +1,7 @@
 # Personal Portfolio Website 🌐
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Deployment](https://img.shields.io/badge/deployed_on-Google_Cloud-4285F4?logo=google-cloud)](https://your-website-url.com)
+[![Deployment](https://img.shields.io/badge/deployed_on-Google_Cloud-4285F4?logo=google-cloud)](https://portfolio-lfr9.onrender.com)
 [![Responsive Design](https://img.shields.io/badge/mobile-responsive-success)]()
 
 ## Purpose 🚀
